@@ -1,0 +1,200 @@
+{
+ "1": {
+  "direction": "Lies diesen deutschen Dialog aus einer witzigen Animationsserie. Natürliches Umgangsdeutsch, lebendig gespielt, nach jedem Satz eine deutliche Pause von etwa einer Sekunde. Leo ist ein junger, selbstbewusster, verschmitzter Mann. Henri ist ein vornehmer älterer Butler mit leichtem französischen Akzent.",
+  "lines": [
+   [
+    "Leo",
+    "zur Kamera, selbstbewusst",
+    "Ich bin Millionär."
+   ],
+   [
+    "Leo",
+    "verschmitzt",
+    "Aber mal sehen, wie die Frauen mich behandeln, wenn sie denken, ich bin pleite."
+   ],
+   [
+    "Henri",
+    "besorgt",
+    "Monsieur, sind Sie sicher? Heutzutage will niemand einen Mann ohne Geld."
+   ],
+   [
+    "Leo",
+    "entschlossen",
+    "Genau das finde ich heraus, Henri."
+   ]
+  ],
+  "ids": [
+   "01",
+   "02",
+   "03",
+   "04"
+  ]
+ },
+ "2": {
+  "direction": "Lies diesen deutschen Dialog aus einer witzigen Animationsserie. Natürliches Umgangsdeutsch, lebendig gespielt, nach jedem Satz eine deutliche Pause von etwa einer Sekunde. Chantal ist eine junge, arrogante, zickige Frau. Leo ist ein junger, lockerer Mann.",
+  "lines": [
+   [
+    "Chantal",
+    "angewidert, herablassend",
+    "Null Euro? Ernsthaft? Bist du obdachlos oder was?"
+   ],
+   [
+    "Leo",
+    "unschuldig",
+    "Ist das ein Problem?"
+   ],
+   [
+    "Chantal",
+    "genervt, abweisend",
+    "Ja. Tschüss, Loser."
+   ],
+   [
+    "Leo",
+    "trocken, leicht amüsiert",
+    "Okay… schönen Tag noch."
+   ]
+  ],
+  "ids": [
+   "06",
+   "07",
+   "08",
+   "09"
+  ]
+ },
+ "3": {
+  "direction": "Lies diesen deutschen Dialog aus einer witzigen Animationsserie. Natürliches Umgangsdeutsch, lebendig gespielt, nach jedem Satz eine deutliche Pause von etwa einer Sekunde. Mia ist eine junge, warmherzige, verspielte Frau. Leo ist ein junger, charmanter Mann.",
+  "lines": [
+   [
+    "Mia",
+    "freundlich lächelnd",
+    "Null Euro, hm? Willkommen im Club."
+   ],
+   [
+    "Mia",
+    "lachend",
+    "Bei mir reicht's auch grad so bis Monatsende."
+   ],
+   [
+    "Leo",
+    "charmant",
+    "Hast du Lust, heute Abend mit mir essen zu gehen?"
+   ],
+   [
+    "Mia",
+    "amüsiert, skeptisch",
+    "Mit null Euro? Wie willst du das bezahlen?"
+   ],
+   [
+    "Leo",
+    "zwinkernd",
+    "Lass das mal meine Sorge sein."
+   ]
+  ],
+  "ids": [
+   "10",
+   "11",
+   "12",
+   "13",
+   "14"
+  ]
+ },
+ "4": {
+  "direction": "Lies diesen deutschen Dialog aus einer witzigen Animationsserie, er spielt in einem Restaurant. Natürliches Umgangsdeutsch, nach jedem Satz eine deutliche Pause von etwa einer Sekunde. Mia ist eine junge, warmherzige Frau. Leo ist ein junger, lockerer Mann.",
+  "lines": [
+   [
+    "Mia",
+    "bescheiden",
+    "Für mich nur ein Leitungswasser, bitte."
+   ],
+   [
+    "Leo",
+    "locker",
+    "Für mich auch."
+   ],
+   [
+    "Mia",
+    "flüsternd, mitleidig",
+    "Hast du gesehen? Der Kellner hat nur drei Euro. Der Arme."
+   ],
+   [
+    "Leo",
+    "beiläufig",
+    "Ich geh mal kurz zur Toilette."
+   ]
+  ],
+  "ids": [
+   "16",
+   "17",
+   "18",
+   "19"
+  ]
+ },
+ "5": {
+  "direction": "Lies diesen deutschen Dialog aus einer witzigen Animationsserie, er spielt in einem Restaurant. Natürliches Umgangsdeutsch, nach jedem Satz eine deutliche Pause von etwa einer Sekunde. Karl ist ein gutmütiger, rauer Kellner. Leo ist ein junger Mann, der heimlich flüstert.",
+  "lines": [
+   [
+    "Karl",
+    "freundlich",
+    "Guten Abend! Was darf ich Ihnen bringen?"
+   ],
+   [
+    "Leo",
+    "flüsternd, verschwörerisch, schnell",
+    "Bringen Sie uns das teuerste Menü. Ich zahle heimlich. Sagen Sie einfach, es geht aufs Haus."
+   ],
+   [
+    "Karl",
+    "verwirrt, überrascht",
+    "Aber… Sie haben doch null Euro?!"
+   ],
+   [
+    "Leo",
+    "flüsternd",
+    "Pssst."
+   ],
+   [
+    "Karl",
+    "hektisch, stolpernd",
+    "Einmal Hummer und Champagner… äh… geht aufs Haus!"
+   ]
+  ],
+  "ids": [
+   "15",
+   "20",
+   "21",
+   "22",
+   "23"
+  ]
+ },
+ "6": {
+  "direction": "Lies diesen deutschen Dialog aus einer witzigen Animationsserie. Natürliches Umgangsdeutsch, nach jedem Satz eine deutliche Pause von etwa einer Sekunde. Mia ist eine junge Frau mit einem Geheimnis. Leo ist ein junger Mann.",
+  "lines": [
+   [
+    "Mia",
+    "fassungslos, begeistert",
+    "Aufs Haus? Das gibt's doch nicht!"
+   ],
+   [
+    "Mia",
+    "leise, zu sich selbst, nachdenklich",
+    "Wenn er wüsste…"
+   ],
+   [
+    "Leo",
+    "fürsorglich, leicht stutzig",
+    "Alles okay bei dir?"
+   ],
+   [
+    "Mia",
+    "ertappt, gezwungen fröhlich",
+    "Ja… alles bestens."
+   ]
+  ],
+  "ids": [
+   "24",
+   "25",
+   "27",
+   "28"
+  ]
+ }
+}

@@ -72,6 +72,17 @@ Vorher den HyperFrames-Skill lesen (`npx hyperframes skills update`, dann `/hype
 5. Stirn-Display als wiederverwendbare Komponente: schwarzer Rahmen, LED-Ziffern (Monospace, Glow per `text-shadow`), Farbe nach Betrag, Zähl-Animation über die GSAP-Timeline (kein `Math.random`, kein Timer).
 6. `npx hyperframes check --json` → `npx hyperframes snapshot --review` → Vorschau → `npx hyperframes render`.
 
+### Skripte (`scripts/`, Arbeitsordner z. B. `~/zd`, Schlüssel in `~/.zd/key` – nie ins Repo)
+
+| Skript | Zweck |
+|---|---|
+| `tts_multi.py MODEL G` | Dialoggruppe `G` aus `groups.json` als Zwei-Sprecher-TTS → `voice/gG.wav`. Bündeln spart Anfragen: die Gratis-Stufe erlaubt nur **10 TTS-Anfragen/Tag pro Modell** (`gemini-2.5-flash-preview-tts` funktioniert, Regie als `(…)` vor dem Satz). |
+| `split.py` | Whisper (sherpa-onnx, `whisper-small` von den sherpa-onnx-GitHub-Releases) + Pausen-Erkennung → ordnet jeden Satz zu, schreibt `voice/segments.json`. |
+| `img.py OUT "prompt" [refs…]` | Bild per Gemini Image (9:16). **Braucht aktivierte Abrechnung** – Gratis-Limit für Bilder ist 0. |
+| `build.py` | Erzeugt `teil-NN/index.html` aus `shots.json` (Einstellung ↔ Sätze), `segments.json` und `displays.json` (Position + Zahlenverlauf `[[t, Betrag], …]` des Stirn-Displays je Einstellung). |
+
+Sätze nach dem Aufteilen: Rand-Stille entfernen, `atempo=1.07`, `loudnorm -16 LUFS`.
+
 ## 7. Videobeschreibung (pro Teil)
 
 ```
