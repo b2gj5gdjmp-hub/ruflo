@@ -1,6 +1,6 @@
 ---
 name: zahlendreher-serie
-description: Baut deutsche TikTok-Storytelling-Serien im Pixar-3D-Stil für den Account @zahlendreher.tv – Figuren mit einer leuchtenden Zahl (Kontostand) auf der Stirn, Rollenstimmen (männlich/weiblich), mehrteilige Handlung mit Cliffhanger am Ende jedes Teils, gerendert im Code mit HyperFrames. Auch für Profilname, Profilbild, Bio und Videobeschreibungen. Verwenden, wenn ein neuer Teil, ein Drehbuch, eine Videobeschreibung oder Profil-Material für @zahlendreher.tv gebraucht wird.
+description: Baut deutsche TikTok-Storytelling-Serien als kostenlose 2D-Cartoon-Animation im Code für den Account @zahlendreher.tv – Figuren mit einer leuchtenden Zahl (Kontostand) auf der Stirn, Rollenstimmen (männlich/weiblich), mehrteilige Handlung mit Cliffhanger am Ende jedes Teils, gerendert im Code mit HyperFrames. Auch für Profilname, Profilbild, Bio und Videobeschreibungen. Verwenden, wenn ein neuer Teil, ein Drehbuch, eine Videobeschreibung oder Profil-Material für @zahlendreher.tv gebraucht wird.
 ---
 
 # @zahlendreher.tv – Serien-Skill
@@ -19,7 +19,7 @@ Unser eigenes Format: **Jeder trägt seinen Kontostand auf der Stirn. Manche lü
 ## 2. Stil-Bibel (aus der Referenzanalyse)
 
 - **Format:** 1080×1920, 30 fps, 55–75 s pro Teil, keine Untertitel (wie Vorbild), kein Intro, kein Logo.
-- **Look:** Pixar/Disney-3D, warmes Golden-Hour- oder Abendlicht, Großstadt-Bokeh, glänzende Materialien, große ausdrucksstarke Augen.
+- **Look:** 2D-Cartoon im Code (kostenlos, Standard) – optional Pixar/Disney-3D; warmes Golden-Hour- oder Abendlicht, Großstadt-Bokeh, glänzende Materialien, große ausdrucksstarke Augen.
 - **Schnitt:** neues Bild alle **1,8–2,6 s** (≈ 25–32 Einstellungen). Wechsel Nahaufnahme ↔ Halbtotale ↔ Totale. Jedes Bild bekommt eine langsame Kamerafahrt (Push-in 4–8 % oder seitlicher Drift), harter Schnitt, keine Überblendungen.
 - **Die Zahl:** LED-Display auf der Stirn, **im Code** gerendert (nie vom Bildmodell – Bildmodelle schreiben Zahlen falsch). Rot = wenig Geld (< 1.000 €), Grün = viel Geld. Format deutsch: `2.400.000 €`. Wechsel als Zähl-Animation (Rollen der Ziffern, 0,6–1,2 s) mit kurzem Flackern.
 - **Sprache:** Umgangsdeutsch, kurze Sätze, Jugendsprache dosiert („Digger“, „Alter“, „ernsthaft jetzt?“). Gedanken einer Figur als Flüstern („Soll ich's ihr sagen?“).
@@ -47,7 +47,11 @@ Stimmen über Gemini-TTS (`GEMINI_API_KEY`), deutsche Texte, Regieanweisung im `
 
 Neue Figur: zuerst hier eintragen (Lebensmittel-Kopf für Männer/Nebenfiguren, Disney-Frauen wie im Vorbild).
 
-## 5. Bilder (Pixar-Stil)
+## 5. Bilder
+
+**Standard: alles kostenlos, im Code gezeichnet (2D-Cartoon, SVG).** Der Nutzer will nur Gratis-Werkzeuge. Figuren-Rigs stehen in `scripts/chars.py` (Kopf, Augen mit Blinzeln, Brauen + Mund je Stimmung, Arm-Posen, Stirn-Display), Hintergründe und Tisch/Theke in `scripts/scenes.py`. `scripts/build_toon.py` enthält die Shotliste (`SHOTS`: Szene, Unschärfe, Besetzung mit Bildausschnitt `CU/SCU/MCU/MED/SMED/WIDE/XCU`, Pose, Stimmung, Blickrichtung, Zahlenverlauf, Vordergrund) und erzeugt `index.html`: Mund folgt der Lautstärke der Stimme (30 Hz-Hüllkurve), Blinzeln, Atmen, Kopfnicken beim Sprechen, Zähler-Animation – alles als Funktion der Zeit (ein GSAP-Uhr-Tween ruft `render(t)`). Neue Figur = Eintrag in `C`, neue Pose = Eintrag in `ARMS`. Kontrolle: `sheet.py` + `node shot.js` (Figurenblatt), dann `hyperframes snapshot`.
+
+### Optional: Pixar-Bilder (nur mit Bezahl-Abrechnung bei Google)
 
 Jede Einstellung = ein Bild, erzeugt mit dem neuesten Gemini-Bildmodell (`GET https://generativelanguage.googleapis.com/v1beta/models` → Modell mit Bildausgabe wählen). Für Figurenkonstanz die vorherigen Bilder derselben Figur als Referenzbild mitschicken.
 
@@ -81,13 +85,17 @@ Vorher den HyperFrames-Skill lesen (`npx hyperframes skills update`, dann `/hype
 | `img.py OUT "prompt" [refs…]` | Bild per Gemini Image (9:16). **Braucht aktivierte Abrechnung** – Gratis-Limit für Bilder ist 0. |
 | `build.py` | Erzeugt `teil-NN/index.html` aus `shots.json` (Einstellung ↔ Sätze), `segments.json` und `displays.json` (Position + Zahlenverlauf `[[t, Betrag], …]` des Stirn-Displays je Einstellung). |
 
+| `build_toon.py` | **Standardweg:** Cartoon-Folge komplett aus Code (siehe Abschnitt 5). |
+| `sfx.sh` | Erzeugt Geräusche (Zähler-Klicken, Flackern, Cliffhanger-„Dun-dun-DUN“) mit ffmpeg, ohne Netz. |
+
 Sätze nach dem Aufteilen: Rand-Stille entfernen, `atempo=1.07`, `loudnorm -16 LUFS`.
+Rendern: `npx hyperframes render -o <ziel>.mp4 --workers 3`.
 
 ## 7. Videobeschreibung (pro Teil)
 
 ```
 Teil <N> | <Spannungssatz mit der offenen Frage> 😳 Wie geht's weiter? 👇
-#zahlendreher #storytime #serie #kivideo #pixar #fyp #fürdich #deutsch #teil<N>
+#zahlendreher #storytime #serie #cartoon #animation #fyp #fürdich #deutsch #teil<N>
 ```
 Regeln: ≤ 150 Zeichen vor den Hashtags, die Frage des Cliffhangers anteasern, nie spoilern.
 

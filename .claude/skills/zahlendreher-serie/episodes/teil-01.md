@@ -6,7 +6,7 @@
 **Videobeschreibung:**
 ```
 Teil 1 | Er stellt seinen Kontostand auf 0 € … aber was versteckt SIE? 😳 Wie geht's weiter? 👇
-#zahlendreher #storytime #serie #kivideo #pixar #fyp #fürdich #deutsch #teil1
+#zahlendreher #storytime #serie #cartoon #animation #fyp #fürdich #deutsch #teil1
 ```
 
 ## Shotliste
