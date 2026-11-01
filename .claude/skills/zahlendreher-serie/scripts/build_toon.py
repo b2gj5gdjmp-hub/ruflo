@@ -133,7 +133,7 @@ html = f'''<!doctype html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=1080, height=1920" />
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="assets/js/gsap.min.js"></script>
 <style>
 @font-face {{ font-family:"DSEG7"; src:url("assets/fonts/DSEG7Classic-Bold.woff2") format("woff2"); }}
 * {{ margin:0; padding:0; box-sizing:border-box; }}
